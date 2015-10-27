@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var stream = require('commander');
+
+stream
+  .version('0.0.1')
+  .usage('[command] [options] <file ...>')
+  .option('-p, --port', 'Specified port')
+  .option('-o, --output', 'Output to stdout')
+  .option('-i, --input', 'File input')
+  .command('start', 'Start video streaming')
+  .command('stop', 'Stop video streaming')
+  .parse(process.argv);

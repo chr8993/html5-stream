@@ -1,0 +1,38 @@
+{
+  "name": "html5-stream",
+  "version": "0.0.1",
+  "description": "Stream video to html5 canvas using ffmpeg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chr8993/html5-stream.git"
+  },
+  "keywords": [
+    "html5",
+    "canvas",
+    "video",
+    "mp4",
+    "ffmpeg",
+    "stream",
+    "socket",
+    "io",
+    "mpeg",
+    "mov",
+    "webcam"
+  ],
+  "bin": {
+    "html5-stream": "./bin/html5-stream"
+  },
+  "author": "Christian Gomez <chr8993@gmail.com> (http://christiangomez.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chr8993/html5-stream/issues"
+  },
+  "homepage": "https://github.com/chr8993/html5-stream#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
