@@ -1,13 +1,21 @@
 #!/usr/bin/env node
 
-var stream = require('commander');
+var prgm    = require('commander');
+var path    = require('path');
+var dir     = path.resolve(__dirname, '../');
+var stream  = require(dir + '/lib/index.js');
 
-stream
+prgm
   .version('0.0.1')
   .usage('[command] [options] <file ...>')
   .option('-p, --port', 'Specified port')
-  .option('-o, --output', 'Output to stdout')
-  .option('-i, --input', 'File input')
-  .command('start', 'Start video streaming')
-  .command('stop', 'Stop video streaming')
-  .parse(process.argv);
+  .option('-o, --output', 'Output to stdout');
+
+prgm
+  .command('stream [env]')
+  .description('Stream video file on connect')
+  .option('-w, --write', 'Write to file')
+  .option('-i, --input [file]', 'Input file')
+  .action(stream.show);
+
+prgm.parse(process.argv);
